@@ -1,16 +1,17 @@
+import { PixelMessage } from './typings/events'
 import { canUseDOM } from 'vtex.render-runtime'
 
-export function handleEvents(e: PixelMessage) {
-  switch (e.data.eventName) {
-    case 'vtex:pageView': {
-
-    }
-    default: {
-      return
-    }
+function handleMessages(e: PixelMessage) {
+  if (e.data.eventName === "vtex:orderPlaced") {
+    const { currency, transactionTotal } = e.data
+    window.uetq = window.uetq || [];
+    window.uetq.push({
+      'gv': transactionTotal,
+      'gc': currency
+    });
   }
 }
 
 if (canUseDOM) {
-  window.addEventListener('message', handleEvents)
+  window.addEventListener('message', handleMessages)
 }
