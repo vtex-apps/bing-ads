@@ -1,3 +1,8 @@
+interface Event extends Event {
+  data: any;
+}
+
+
 interface Window extends Window {
-  dataLayer: any[]
+  uetq: any
 }

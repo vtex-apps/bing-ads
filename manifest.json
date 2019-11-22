@@ -1,9 +1,9 @@
 {
-  "name": "CHANGEME",
+  "name": "bing",
   "vendor": "vtex",
   "version": "0.0.1",
-  "title": "CHANGEME",
-  "description": "CHANGEME",
+  "title": "bing",
+  "description": "bing",
   "billingOptions": {
     "termsURL": "",
     "support": {
@@ -14,18 +14,19 @@
   "builders": {
     "react": "3.x",
     "store": "0.x",
-    "pixel": "0.x"
+    "pixel": "0.x",
+    "docs": "0.x"
   },
   "dependencies": {
     "vtex.pixel-interfaces": "1.x"
   },
   "settingsSchema": {
-    "title": "APP NAME",
+    "title": "Bing uet Options",
     "type": "object",
     "properties": {
-      "gtmId": {
-        "title": "SAMPLE FIELD",
-        "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
+      "bingId": {
+        "title": "Bing Key",
+        "description": "Enter your 7 digits key Bing",
         "type": "string"
       }
     }
