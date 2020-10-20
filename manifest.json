@@ -23,6 +23,7 @@
   "settingsSchema": {
     "title": "Bing uet Options",
     "type": "object",
+    "bindingBounded": true,
     "properties": {
       "bingId": {
         "title": "Bing Key",
